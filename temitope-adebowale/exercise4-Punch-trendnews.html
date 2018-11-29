@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Trending news </title>
+</head>
+<body>
+	<script>
+		// Extracting trending news on punchNG in JSON format
+
+		let trending = document.querySelectorAll('a > h1');
+		let response = {};
+
+		for ( let count = 0; count < trending.length; count++) {
+			response[count] = trending[count].textContent;
+		}
+
+		document.write(JSON.stringify(response));
+
+		//Output in JSON format
+		{"0":"Senate okays higher institutions for President’s hometown,","1":"EFCC hands over 116 cars, 20 houses to First Bank ","2":"Suspected F-SARS operative shoots LASTMA official dead","3":"Metele attack: Army confirms 23 soldiers killed, 31 others…","4":"UEFA Champions League top scorers","5":"Brothers behead 10-year-old for N200,000 in Lagos","6":"Arrest Aregbesola for forging police report, PDP tells IGP","7":"Metele attack: No army can have enough equipment for…"}
+	</script>
+</body>
+</html>
